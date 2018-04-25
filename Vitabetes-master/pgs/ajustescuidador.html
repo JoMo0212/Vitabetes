@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<title>Ajustes Paciente</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body class="w3-pale-blue">
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+
+
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+
+
+    <a href="principalpaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-home"></i> Pagina principal</a>
+    <a href="bitacorapaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf0ce;</i> Bitacora</a>
+    <a href="carnetpaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf2bc;</i> Carnet</a>
+    <a href="graficospaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf080;</i> Grafico</a>
+
+
+    <form>
+
+      <button class="w3-bar-item w3-button w3-bottom" formaction="inicio.html" style="width: 5rem;"><i style="font-size:3rem" class="fa">&#xf00d;</i></button>
+      <button class="w3-bar-item w3-button w3-bottom" formaction="ajustespaciente.html" style="width: 5rem; margin-left: 4rem;"><i style="font-size:3rem" class="fa">&#xf085;</i></button>
+
+    </form>
+
+
+</div>
+
+<div id="main">
+
+
+  <div class="w3-container">
+
+
+    <div class="w3-panel w3-light-blue w3-card-4">
+
+      <button id="openNav" class="w3-button w3-light-blue w3-xxlarge w3-dislpay-left" style="font-size: 3rem;" onclick="w3_open()">&#9776;</button>
+      <p class="w3-right w3-opacity" style="font-size: 2.5rem; width: 57%; margin: .5rem;">Vitabes-Paciente</p>
+
+    </div>
+
+        <!-- Contenido de la pagina-->
+        
+        <header class="w3-opacity w3-center"><h1>Ajustes</h1></header>
+
+        <div class="w3-container">
+
+        <form>
+          
+          </form>
+        <form>
+            <div class="w3-bar">
+              <button class="w3-button w3-bar-item w3-opacity w3-teal" onclick="document.getElementById('id01').style.display='block'" style="width: 50%"><h1>Cambiar nombre de Usuario</h1></button>
+              <button class="w3-button w3-bar-item w3-opacity w3-teal" onclick="document.getElementById('id02').style.display='block'" style="width: 50%"><h1>Cambiar contrasena</h1></button>
+            </div>
+          </button>
+
+          <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                <div class="w3-center"><br>
+                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                  <h3 class="w3-opacity">Cambiar nombre de usuario</h3>
+                </div>
+
+                <form class="w3-container" action="/action_page.php">
+                  <div class="w3-section w3-padding">
+                      <label><b>Ingrese el nuevo nombre de usuario</b></label>
+                      <input class="val-texto w3-input w3-border w3-margin-bottom" type="text" placeholder="Nuevo nombre de usuario" name="nuevo_nombre" required>
+                      <label><b>Repetir nombre de usuario</b></label>
+                      <input class="val-fecha w3-input w3-border" type="text" placeholder="Repetir nombre de usuario" name="repetir" required>
+                      
+                      
+                      <div class="w3-bar">
+                      <button class="val-subida w3-button w3-block w3-teal w3-section w3-bar-item w3-padding" style="width: 50%" type="submit">Cambiar</button>
+                      <button onclick="document.getElementById('id01').style.display='none'" type="button" style="width: 50%" class="w3-button w3-block w3-red w3-section w3-bar-item w3-padding">Cancelar</button>
+                      </div>
+                  </div>
+                </form>
+
+            </div>
+          </div>
+
+
+        </form>
+      </div>
+
+      <div class="w3-half">
+        
+        <form>
+          
+            
+          </button>
+
+          <div id="id02" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                <div class="w3-center"><br>
+                  <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                  <h3 class="w3-opacity">Cambiar contraseña</h3>
+                </div>
+
+                <form class="w3-container" action="/action_page.php">
+                  <div class="w3-section w3-padding">
+                      <label><b>Nueva contrasena</b></label>
+                      <input class="val-num w3-input w3-border w3-margin-bottom" type="text" placeholder="Nueva contrasena" name="nueva_contrasena" required>
+                      <label><b>Repetir contrasena</b></label>
+                      <input class="val-texto w3-input w3-border" type="text" placeholder="Repetir contrasena" name="repetirC" required>
+
+                      <div class="w3-bar">
+                        <button class="val-subida w3-button w3-block w3-teal w3-section w3-bar-item" style="width: 50%" type="submit">Cambiar</button>
+                        <button onclick="document.getElementById('id02').style.display='none'" type="button" style="width: 50%" class="w3-button w3-block w3-red w3-section w3-padding w3-bar-item">Cancelar</button>
+                      </div>
+                  </div>
+                </form>
+
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                  
+                </div>
+
+            </div>
+          </div>
+
+        </form>
+      </div>
+      
+    </div>
+
+
+  </div>
+
+
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+function myFunction(id) {
+        var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else { 
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+<script src="../JS/moment.js"></script>
+<script src="../JS/jquery.js"></script>
+<script src="../JS/valid.js"></script>
+
+</body>
+</html>
