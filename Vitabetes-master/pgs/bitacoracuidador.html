@@ -69,7 +69,11 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>
+                  <button class="w3-bar-item w3-button w3-opacity" onclick="document.getElementById('id01').style.display='block'" style=" font-size: 1.5rem;">
+            <i style="font-size:2rem;" class="material-icons">&#xE89C;</i>
+          </button>
+                </td>
               </tr>
               <tr>
                 <td></td>
@@ -78,7 +82,11 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>
+                  <button class="w3-bar-item w3-button w3-opacity" onclick="document.getElementById('id01').style.display='block'" style=" font-size: 1.5rem;">
+            <i style="font-size:2rem;" class="material-icons">&#xE89C;</i>
+          </button>
+                </td>
               </tr>
               <tr>
                   <td></td>
@@ -87,15 +95,47 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
+                <td>
+                  <button class="w3-bar-item w3-button w3-opacity" onclick="document.getElementById('id01').style.display='block'" style=" font-size: 1.5rem;">
+            <i style="font-size:2rem;" class="material-icons">&#xE89C;</i>
+          </button>
+                </td>
               </tr>
           </table>
+
+          <div id="id01" class="w3-modal">
+            <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+                <div class="w3-center"><br>
+                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+                  <h3 class="w3-opacity">Crear nota</h3>
+                </div>
+
+                <form class="w3-container" action="/action_page.php">
+                  <div class="w3-section w3-padding">
+                      <label><b>Insertar Nota</b></label>
+                      <input class="val-texto w3-input w3-border" type="text" placeholder="Nota" name="Titulo" required>
+                      
+                      
+                      <div class="w3-bar">
+                      <button class="val-subida w3-button w3-block w3-teal w3-section w3-bar-item w3-padding" style="width: 50%" type="submit">Crear</button>
+                      <button onclick="document.getElementById('id01').style.display='none'" type="button" style="width: 50%" class="w3-button w3-block w3-red w3-section w3-bar-item w3-padding">Cancelar</button>
+                      </div>
+                  </div>
+                </form>
+
+                <div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+                  
+                </div>
+
+            </div>
+          </div>
+          
         </form>
     </div>
       <br>
     <div class="w3-third">
-
-      <a class="w3-bar-item w3-button w3-opacity" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="material-icons">&#xE89C;</i> Agregar Nota</a>
+      &nbsp
     </div>
 
     <div class="w3-twothird" align="right">
@@ -109,6 +149,7 @@
 
     </div>
 
+    
         
   </div>
 
