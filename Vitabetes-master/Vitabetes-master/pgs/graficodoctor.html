@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../CSS/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Vitabes</title>
+</head>
+<body class="w3-pale-blue" style="margin: 1rem; padding: 1rem;">
+
+	<div class="w3-panel w3-light-blue w3-card-4">
+		<p class="w3-center w3-opacity" style="font-size: 2.5rem;">Vitabes-Doctor</p>
+	</div>
+	<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
+		<a href="principaldoctor.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-home"></i> Pagina principal</a>
+    <a href="registropaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-male"></i> Registrar paientes</a>
+    <a href="vispaciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-search"></i> Pacientes</a>
+    
+		<form>
+			<button class="w3-bar-item w3-button w3-bottom" formaction="inicio.html" style="width: 5rem;"><i style="font-size:3rem" class="fa">&#xf00d;</i></button>
+			<button class="w3-bar-item w3-button w3-bottom" formaction="ajustespaciente.html" style="width: 5rem; margin-left: 4rem;"><i style="font-size:3rem" class="fa">&#xf085;</i></button>
+		</form>
+	</div>
+
+	<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
+
+	<div>
+		<button class="w3-button w3-light-blue w3-xxlarge w3-display-topleft" style="margin: 5rem;" onclick="w3_open()">&#9776;</button>
+		<div class="w3-container">
+
+			<h1 class="w3-opacity w3-center">Graficos</h1>
+			<br>
+			<br>
+
+			<div class="w3-center"><i style="font-size:25rem;" class="fa">&#xf080;</i></div>
+
+			<form>
+  				<button class="w3-bar-item w3-button w3-center" onclick="document.getElementById('id01').style.display='block'" style="width: 20rem;">
+  					<div class="w3-center"><i style="font-size:3.5rem;" class="fa">&#xf15c;<h1 class="w3-opacity">Generar Reporte</h1></i></div>
+  				</button>
+
+  				<div id="id01" class="w3-modal">
+   					<div class="w3-modal-content w3-card-4 w3-animate-zoom" style="max-width:600px">
+
+      					<div class="w3-center"><br>
+        					<span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-xlarge w3-hover-red w3-display-topright" title="Close Modal">&times;</span>
+        					<h3 class="w3-opacity">Generar reporte</h3>
+      					</div>
+
+      					<form class="w3-container" action="/action_page.php">
+        					<div class="w3-section">
+          						<label><b>Nombre</b></label>
+          						<input class="val-texto w3-input w3-border w3-margin-bottom" type="text" placeholder="nombre" name="Nombre" required>
+          						<label><b>Edad</b></label>
+          						<input class="val-num w3-input w3-border" type="text" placeholder="Edad" name="Edad" required>
+          						<label><b>Peso</b></label>
+          						<input class="val-num w3-input w3-border" type="text" placeholder="Peso" name="Peso" required>
+          						<label><b>IMC</b></label>
+          						<input class="val-num w3-input w3-border" type="text" placeholder="IMC" name="IMC" required>
+          						<label><b>Talla</b></label>
+          						<input class="val-num w3-input w3-border" type="text" placeholder="Talla" name="Talla" required>
+          						<label><b>Nivel de Glucosa</b></label>
+          						<input class="val-num w3-input w3-border" type="text" placeholder="Glucosa" name="NivelGlucosa" required>
+          						<label><b>Nivel de Hemoglobina</b></label>
+          						<input class="val-num w3-input w3-border" type="text" placeholder="Nivel de Hemoglobina" name="NivelHemoglobina" required>
+          						<label><b>Presion arterial</b></label>
+          						<input class="val-num w3-input w3-border" type="text" placeholder="PresionArterial" name="Presion" required>
+          						<button class="val-subida w3-button w3-block w3-teal w3-section w3-padding" type="submit">Crear</button>
+        					</div>
+      					</form>
+
+      					<div class="w3-container w3-border-top w3-padding-16 w3-light-grey">
+        					<button onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-red">Cancel</button>
+      					</div>
+
+    				</div>
+  				</div>
+
+
+  			</form>
+			
+		</div>
+	</div>
+     
+	<script>
+		function w3_open() {
+    		document.getElementById("mySidebar").style.display = "block";
+    		document.getElementById("myOverlay").style.display = "block";
+		}
+		function w3_close() {
+    		document.getElementById("mySidebar").style.display = "none";
+    		document.getElementById("myOverlay").style.display = "none";
+		}
+	</script>
+	<script src="../JS/moment.js"></script>
+	<script src="../JS/jquery.js"></script>
+	<script src="../JS/valid.js"></script>
+</body>
+</html>

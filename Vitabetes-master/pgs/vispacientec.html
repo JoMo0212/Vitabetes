@@ -1,58 +1,41 @@
 <!DOCTYPE html>
 <html>
-<title>Principal Cuidador</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-<body class="w3-pale-blue">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../CSS/w3.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Vitabes</title>
+</head>
+<body class="w3-pale-blue" style="margin: 1rem; padding: 1rem;">
 
-<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+	<div class="w3-panel w3-light-blue w3-card-4">
+		<p class="w3-center w3-opacity" style="font-size: 2.5rem;">Vitabes-Cuidador</p>
+	</div>
+	<div class="w3-sidebar w3-bar-block w3-animate-left" style="display:none;z-index:5" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large" onclick="w3_close()">Cerrar &times;</button>
 
+		<a href="principalcuidador.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-home"></i> Pagina principal</a>
+		<a href="bitacoracuidador.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf0ce;</i> Bitacora</a>
+		<a href="" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf2bc;</i> Carnet</a>
+		<a href="graficogeneral.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf080;</i> Grafico</a>
+		
+		<form>
+			<button class="w3-bar-item w3-button w3-bottom" formaction="inicio.html" style="width: 5rem;"><i style="font-size:3rem" class="fa">&#xf00d;</i></button>
+			<button class="w3-bar-item w3-button w3-bottom" formaction="" style="width: 5rem; margin-left: 4rem;"><i style="font-size:3rem" class="fa">&#xf085;</i></button>
+		</form>
+	</div>
 
-  <button class="w3-bar-item w3-button w3-large"
-  onclick="w3_close()">Close &times;</button>
+	<div class="w3-overlay w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" id="myOverlay"></div>
 
+	<div>
+		<button class="w3-button w3-light-blue w3-xxlarge w3-display-topleft" style="margin: 5rem;" onclick="w3_open()">&#9776;</button>
+		<div class="w3-container">
 
-    <a href="principalcuidador.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa fa-home"></i> Pagina principal</a>
-    <a href="bitacoracuidador.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf0ce;</i> Bitacora</a>
-    <a href="carnetcuidador.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf2bc;</i> Carnet</a>
-    <a href="graficogeneral.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i style="font-size:2rem;" class="fa">&#xf080;</i> Grafico</a>
+			<h1 class="w3-center w3-opacity">Busqueda de Pacientes</h1>
 
-
-    <form>
-
-      <button class="w3-bar-item w3-button w3-bottom" formaction="inicio.html" style="width: 5rem;"><i style="font-size:3rem" class="fa">&#xf00d;</i></button>
-      <button class="w3-bar-item w3-button w3-bottom" formaction="ajustesdoctor.html" style="width: 5rem; margin-left: 4rem;"><i style="font-size:3rem" class="fa">&#xf085;</i></button>
-
-    </form>
-
-
-</div>
-
-<div id="main">
-
-
-  <div class="w3-container">
-
-
-    <div class="w3-panel w3-light-blue w3-card-4">
-
-      <button id="openNav" class="w3-button w3-light-blue w3-xxlarge w3-dislpay-left" style="font-size: 3rem;" onclick="w3_open()">&#9776;</button>
-      <p class="w3-right w3-opacity" style="font-size: 2.5rem; width: 57%; margin: .5rem;">Vitabes-Cuidador</p>
-
-    </div>
-
-        <!-- Contenido de la pagina-->
-
-        <div class="w3-container">
-
-      <h1 class="w3-center w3-opacity">Busqueda de Pacientes</h1>
-
-      <div class="w3-panel w3-light-gray w3-hover-shadow w3-padding-64 w3-center" style="width:100%;">
-          
-           <input class="val-IDKEY w3-input w3-border w3-padding" type="text" placeholder="Buscar paciente" id="myInput" onkeyup="myFunction()">
+			<div class="w3-panel w3-light-gray w3-hover-shadow w3-padding-64 w3-center" style="width:100%;">
+	    		
+	    		 <input class="w3-input w3-border w3-padding" type="text" placeholder="Buscar paciente" id="myInput" onkeyup="myFunction()">
 
   <table class="w3-table-all w3-margin-top" id="myTable">
     <tr>
@@ -61,7 +44,7 @@
     </tr>
     <tr>
       <td>1</td>
-      <td><a href="cuidador_paciente.html" class="w3-bar-item w3-button" style="font-size: 1.5rem;"><i class="material-icons">accessibility</i>Pedrito</a></td>
+      <td>.....</td>
     </tr>
     <tr>
       <td>2</td>
@@ -92,56 +75,45 @@
       <td>.....</td>
     </tr>
   </table>
-        </div>
+	  		</div>
 
-      
-      
-    </div>
-  <script>
-    function myFunction() {
-      var input, filter, table, tr, td, i;
-      input = document.getElementById("myInput");
-      filter = input.value.toUpperCase();
-      table = document.getElementById("myTable");
-      tr = table.getElementsByTagName("tr");
-      for (i = 0; i < tr.length; i++) {
-        td = tr[i].getElementsByTagName("td")[0];
-        if (td) {
-          if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            tr[i].style.display = "";
-          } else {
-            tr[i].style.display = "none";
-          }
-        }
-      }
-    }
-  </script>
+			
+			
+		</div>
+	</div>
+	<script>
+		function myFunction() {
+		  var input, filter, table, tr, td, i;
+		  input = document.getElementById("myInput");
+		  filter = input.value.toUpperCase();
+		  table = document.getElementById("myTable");
+		  tr = table.getElementsByTagName("tr");
+		  for (i = 0; i < tr.length; i++) {
+		    td = tr[i].getElementsByTagName("td")[0];
+		    if (td) {
+		      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+		        tr[i].style.display = "";
+		      } else {
+		        tr[i].style.display = "none";
+		      }
+		    }
+		  }
+		}
+	</script>
 
-
-    </div>
-
-        
-  </div>
-
-
-</div>
-
-<script>
-function w3_open() {
-  document.getElementById("main").style.marginLeft = "25%";
-  document.getElementById("mySidebar").style.width = "25%";
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("openNav").style.display = 'none';
-}
-function w3_close() {
-  document.getElementById("main").style.marginLeft = "0%";
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("openNav").style.display = "inline-block";
-}
-</script>
-<script src="../JS/moment.js"></script>
-<script src="../JS/jquery.js"></script>
-<script src="../JS/valid.js"></script>
-
+     
+	<script>
+		function w3_open() {
+    		document.getElementById("mySidebar").style.display = "block";
+    		document.getElementById("myOverlay").style.display = "block";
+		}
+		function w3_close() {
+    		document.getElementById("mySidebar").style.display = "none";
+    		document.getElementById("myOverlay").style.display = "none";
+		}
+	</script>
+	<script src="../JS/moment.js"></script>
+	<script src="../JS/jquery.js"></script>
+	<script src="../JS/valid.js"></script>
 </body>
 </html>
